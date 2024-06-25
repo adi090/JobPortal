@@ -1,4 +1,4 @@
-import { Cursor } from "mongoose";
+
 import React, { useEffect, useState } from "react";
 import {Link} from 'react-router-dom';
 function MyJobs() {
