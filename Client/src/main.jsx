@@ -8,7 +8,7 @@ import router from './Router/Router.jsx'
 ReactDOM.createRoot(document.getElementById('root')).render(
   <Auth0Provider 
   domain="dev-eposaqanusm18xmx.us.auth0.com"
-    clientId="cZG4xTs6U3ngXUAYpHPTSHgl6AtHLPWg"
+    clientId="x32rDhCiaIdCiRERVEUefAQHtxRGeimf"
     authorizationParams={{
       redirect_uri: window.location.origin
     }}>
