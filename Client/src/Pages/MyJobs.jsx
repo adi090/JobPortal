@@ -11,7 +11,7 @@ const [currentPage,setCurrentPage]=useState(1);
 const itemsPerPage=4;
   useEffect(() => {
     setIsLoading(true);
-    fetch(`http://localhost:5000/myJobs/asdas@gmail.com`)
+    fetch(`https://job-portal-api-olive.vercel.app/myJobs/asdas@gmail.com`)
       .then((res) => res.json())
       .then((data) => {
         setJobs(data);
