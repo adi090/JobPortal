@@ -12,7 +12,7 @@ function Home() {
   const itemsPerPage=6;
   useEffect(() => {
     setIsLoading(true);
-    fetch("jobs.json")
+    fetch("http://localhost:5000/all-jobs/")
       .then((res) => res.json())
       .then((data) => {
         setJobs(data);
@@ -73,12 +73,12 @@ function Home() {
           employmentType,
           postingDate,
         }) =>
-          jobLocation.toLowerCase() === selected.toLowerCase() ||
-          parseInt(maxPrice) <= parseInt(selected) ||
-          postingDate >= selected ||
-          experienceLevel.toLowerCase() === selected.toLowerCase() ||
-          salaryType.toLowerCase() === selected.toLowerCase() ||
-          employmentType.toLowerCase() === selected.toLowerCase()
+          (jobLocation && jobLocation.toLowerCase() === selected.toLowerCase()) ||
+          (maxPrice && parseInt(maxPrice) <= parseInt(selected)) ||
+          (postingDate && postingDate >= selected) ||
+          (experienceLevel && experienceLevel.toLowerCase() === selected.toLowerCase()) ||
+          (salaryType && salaryType.toLowerCase() === selected.toLowerCase()) ||
+          (employmentType && employmentType.toLowerCase() === selected.toLowerCase())
       );
     }
     //slice the data based on current page

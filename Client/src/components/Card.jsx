@@ -14,6 +14,7 @@ function Card({data}) {
            
             <div className='text-primary/70 text-base flex flex-wrap gap-2 mb-2'>
                 <span className='flex items-center gap-2'><FiMapPin/>{jobLocation}</span>
+                {/* <span className='flex items-center gap-2'><FiMapPin/>{_id}</span> */}
                 <span className='flex items-center gap-2'><FiClock/>{employmentType}</span>
                 <span className='flex items-center gap-2'><FiDollarSign/>{minPrice}-{maxPrice}k</span>
                 <span className='flex items-center gap-2'><FiCalendar/>{postingDate}</span>
