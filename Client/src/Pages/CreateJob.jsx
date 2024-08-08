@@ -11,7 +11,7 @@ function CreateJob() {
   } = useForm();
   const onSubmit = (data) => {
     data.skills=selectedOption;
-    fetch("https://jobportal-backend-xcai.onrender.com/post-job",{
+    fetch("http://localhost:5000/post-job",{
       method:"POST",
       headers:{"content-type":"application/json"},
       body:JSON.stringify(data)
@@ -19,7 +19,7 @@ function CreateJob() {
     }).then(res =>res.json()).then((result)=>{
       console.log(result)
       if(result.acknowledged===true){
-        alert("JOb Posted Successfully")
+        alert("Job Posted Successfully")
       }
       reset()
     })
