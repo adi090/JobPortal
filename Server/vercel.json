@@ -2,24 +2,15 @@
     "version": 2,
     "builds": [
       {
-        "src": "package.json",
+        "src": "*.js",
         "use": "@vercel/node"
       }
     ],
     "routes": [
       {
-        "src": "/api/(.*)",
-        "dest": "http://localhost:5000/api/$1"
-      },
-      {
         "src": "/(.*)",
-        "dest": "/index.html"
+        "dest": "/"
       }
-    ],
-    "env": {
-      "API_URL": "http://localhost:5000",
-      "NODE_ENV": "production"
-    },
-    "outputDirectory": "build"
+    ]
   }
   
