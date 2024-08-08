@@ -14,7 +14,7 @@ function UpdateJob() {
     } = useForm();
     const onSubmit = (data) => {
       data.skills=selectedOption;
-      fetch(`http://localhost:5000/update-job/${id}`,{
+      fetch(`https://jobportal-backend-xcai.onrender.com/update-job/${id}`,{
         method:"PATCH",
         headers:{"content-type":"application/json"},
         body:JSON.stringify(data)
