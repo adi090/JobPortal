@@ -16,9 +16,9 @@ JobPortal is a web application designed to simplify the job searching process. I
 - User Experience: Craft an awesome UI for an outstanding user experience.
 
 ## Technology Stack
-Frontend: TailwindCSS, React.js
-Backend: Node.js, Express.js
-Database: MongoDB
+- Frontend: TailwindCSS, React.js
+- Backend: Node.js, Express.js
+- Database: MongoDB
 
 ### Landing Page
 ![Screenshot 2024-08-08 180849](https://github.com/user-attachments/assets/0e2130ba-c09f-4a07-b514-4c5ba6b15519)
