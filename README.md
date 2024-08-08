@@ -22,7 +22,9 @@ Database: MongoDB
 
 ### Landing Page
 ![Screenshot 2024-08-08 180849](https://github.com/user-attachments/assets/0e2130ba-c09f-4a07-b514-4c5ba6b15519)
-### 
+### Jobs Added by User
 ![Screenshot 2024-08-08 180926](https://github.com/user-attachments/assets/30edb597-aef3-468e-9be1-36c7b774d5b6)
+### Salary Estimate
 ![Screenshot 2024-08-08 180955](https://github.com/user-attachments/assets/929c20bc-a84f-42e9-a8be-a646d9604057)
+### Post Job
 ![Screenshot 2024-08-08 181013](https://github.com/user-attachments/assets/d839fc83-09ca-4572-882a-0d04d31acdb9)
