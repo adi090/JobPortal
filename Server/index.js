@@ -7,7 +7,13 @@ require('dotenv').config()
 // console.log(process.env.DB_PASSWORD)
 //middleware
 app.use(express.json())
-app.use(cors())
+app.use(cors(
+  {
+    // origin:[""],
+    //         method:["GET","POST"],
+    //         credentials:true
+  }
+))
 // user-adityaprasanan2003
 // pass-vKN8BkKFNTWWThI3
 
