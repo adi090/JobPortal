@@ -7,7 +7,9 @@ require('dotenv').config()
 // console.log(process.env.DB_PASSWORD)
 //middleware
 app.use(express.json())
-app.use(cors())
+const cors = require('cors');
+app.use(cors({ origin: 'https://your-client-domain.com' }));
+
 // user-adityaprasanan2003
 // pass-vKN8BkKFNTWWThI3
 
