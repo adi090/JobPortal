@@ -9,9 +9,9 @@ require('dotenv').config()
 app.use(express.json())
 app.use(cors(
   {
-    origin:["https://job-portal-nava.vercel.app"],
-            method:["GET","POST"],
-            credentials:true
+    // origin:[""],
+    //         method:["GET","POST"],
+    //         credentials:true
   }
 ))
 // user-adityaprasanan2003
