@@ -43,7 +43,7 @@ const itemsPerPage=4;
     setIsLoading(false);
   };
   const handleDelete=(id)=>{
-     fetch(`http://localhost:5000/job/${id}`,{method:"DELETE"}).then(res =>res.json).then(data =>{
+     fetch(`https://jobportal-backend-xcai.onrender.com/job/${id}`,{method:"DELETE"}).then(res =>res.json).then(data =>{
       if(data.acknowledged ===true){
         alert("Job Deleted Successfully ")
       }
