@@ -12,7 +12,7 @@ function Home() {
   const itemsPerPage=6;
   useEffect(() => {
     setIsLoading(true);
-    fetch("http://localhost:5000/all-jobs/")
+    fetch("https://jobportal-backend-xcai.onrender.com/all-jobs/")
       .then((res) => res.json())
       .then((data) => {
         setJobs(data);
