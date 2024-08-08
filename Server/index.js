@@ -7,7 +7,10 @@ require('dotenv').config()
 // console.log(process.env.DB_PASSWORD)
 //middleware
 app.use(express.json())
-// app.use(cors({ origin: 'https://your-client-domain.com' }));
+app.use(cors({ origin: 'https://job-portal-rouge.vercel.app/' ,
+              methods:["POST","GET"],
+              credentials:true
+             }));
 
 // user-
 // pass-
