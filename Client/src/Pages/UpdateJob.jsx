@@ -14,7 +14,7 @@ function UpdateJob() {
     } = useForm();
     const onSubmit = (data) => {
       data.skills=selectedOption;
-      fetch(`https://job-portal-api-olive.vercel.app/update-job/${id}`,{
+      fetch(`http://localhost:5000/update-job/${id}`,{
         method:"PATCH",
         headers:{"content-type":"application/json"},
         body:JSON.stringify(data)

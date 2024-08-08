@@ -8,7 +8,7 @@ function JobDetails() {
   const [job, setJob] = useState(null);
 
   useEffect(() => {
-    fetch(`https://job-portal-api-olive.vercel.app/all-jobs/${id}`)
+    fetch(`http://localhost:5000/all-jobs/${id}`)
       .then(res => res.json())
       .then(data => setJob(data))
       .catch(error => console.error('Error fetching job details:', error));

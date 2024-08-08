@@ -3,23 +3,19 @@ const app = express()
 const cors=require('cors')
 const port =process.env.PORT || 5000;
 require('dotenv').config()
-// console.log(process.env.DB_USER)
+// console.log()
 // console.log(process.env.DB_PASSWORD)
 //middleware
 app.use(express.json())
 app.use(cors(
-  {
-    // origin:[""],
-    //         method:["GET","POST"],
-    //         credentials:true
-  }
+ 
 ))
 // user-adityaprasanan2003
 // pass-vKN8BkKFNTWWThI3
 
 
 const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
-const uri =`mongodb+srv://adityaprasanan2003:vKN8BkKFNTWWThI3@job-portal.nz1gcyr.mongodb.net/?retryWrites=true&w=majority&appName=job-portal`;
+const uri =`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@job-portal.nz1gcyr.mongodb.net/?retryWrites=true&w=majority&appName=job-portal`;
 
 
 // Create a MongoClient with a MongoClientOptions object to set the Stable API version

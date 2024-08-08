@@ -11,7 +11,7 @@ function CreateJob() {
   } = useForm();
   const onSubmit = (data) => {
     data.skills=selectedOption;
-    fetch("https://job-portal-api-olive.vercel.app/post-job",{
+    fetch("http://localhost:5000/post-job",{
       method:"POST",
       headers:{"content-type":"application/json"},
       body:JSON.stringify(data)
