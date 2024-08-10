@@ -67,6 +67,7 @@ async function run() {
     // get jobs by email
     app.get("/myJobs/:email",async(req,res)=>{
       // console.log(req.params.email)
+      // const {email}=req.params;
       const jobs=await jobCollection.find({postedBy: req.params.email}).toArray();
       res.send(jobs)
     })

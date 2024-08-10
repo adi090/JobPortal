@@ -44,10 +44,10 @@ function SalaryPage() {
             <p className="my-2 font-medium text-blue text-lg">{data.salary}</p>
             <div className="flex flex-wrap gap-4">
               <a href="/" className="underline">
-                {data.status}
+                {/* {data.status} */}
               </a>
               <a href="/" className="underline">
-                {data.skills}
+                {/* {data.skills} */}
               </a>
             </div>
           </div>

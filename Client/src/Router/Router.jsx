@@ -10,6 +10,7 @@ import UpdateJob from '../Pages/UpdateJob';
 import Login from '../components/AuthLogin';
 import JobDetails from '../Pages/JobDetails';
 import PrivateRoute from '../components/PrivateRoute'; 
+// import Profile from '../Pages/Profile';
 
 const router = createBrowserRouter([
   {
@@ -27,7 +28,7 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: '/my-jobs',
+        path: '/my-jobs/',
         element: (
           <PrivateRoute element={MyJobs} />
         ),
@@ -48,6 +49,10 @@ const router = createBrowserRouter([
         element: <JobDetails />,
         // loader: ({ params }) => fetch(`http://localhost:5000/all-jobs/${params.id}`)
       }
+      // {
+      //  path:'/profile',
+      //  element:<Profile />
+      // }
     ],
   },
 ]);

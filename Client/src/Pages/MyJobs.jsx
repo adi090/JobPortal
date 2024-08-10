@@ -1,23 +1,36 @@
 
 import React, { useEffect, useState } from "react";
 import {Link} from 'react-router-dom';
+import { useParams } from "react-router-dom";
+import { useAuth0 } from "@auth0/auth0-react";
+
+
 function MyJobs() {
-  const email = "";
+  // const { email } = useParams();
+  const  { user, isAuthenticated } = useAuth0();
+   const email=user.email;
+  //  console.log(email)/;
   const [jobs, setJobs] = useState([]);
   const [searchText, setSearchText] = useState("");
   const [isLoading, setIsLoading] = useState(true);
 // set current page 
 const [currentPage,setCurrentPage]=useState(1);
 const itemsPerPage=4;
-  useEffect(() => {
+useEffect(() => {
+   {
     setIsLoading(true);
-    fetch(`http://localhost:5000/myJobs/asdas@gmail.com`)
+    fetch(`http://localhost:5000/myJobs/${email}`)
       .then((res) => res.json())
       .then((data) => {
         setJobs(data);
         setIsLoading(false);
+      })
+      .catch((error) => {
+        console.error('Error fetching jobs:', error);
+        setIsLoading(false);
       });
-  }, [searchText]);
+  }
+}, []);
   // pagination
   const indexOfLastItem=currentPage*itemsPerPage;
   const indexOfFirstItem=indexOfLastItem -itemsPerPage;
@@ -44,8 +57,10 @@ const itemsPerPage=4;
   };
   const handleDelete=(id)=>{
      fetch(`http://localhost:5000/job/${id}`,{method:"DELETE"}).then(res =>res.json).then(data =>{
-      if(data.acknowledged ===true){
-        alert("Job Deleted Successfully ")
+      {
+        const updatedJobs = jobs.filter(job => job._id !== id);
+        setJobs(updatedJobs);
+        alert("Job Deleted Successfully");
       }
      })
   }
@@ -67,6 +82,7 @@ const itemsPerPage=4;
           >
             Search
           </button>
+   
         </div>
       </div>
       {/* table */}
