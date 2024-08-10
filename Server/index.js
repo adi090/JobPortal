@@ -10,8 +10,7 @@ app.use(express.json())
 app.use(cors(
  
 ))
-// user-adityaprasanan2003
-// pass-vKN8BkKFNTWWThI3
+
 
 
 const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
