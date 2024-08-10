@@ -19,7 +19,7 @@ const itemsPerPage=4;
 useEffect(() => {
    {
     setIsLoading(true);
-    fetch(`https://jobportal-backend-lnsu.onrender.com/myJobs/${email}`)
+    fetch(`https://jobportal-backend-3aoq.onrender.com/myJobs/${email}`)
       .then((res) => res.json())
       .then((data) => {
         setJobs(data);
@@ -56,7 +56,7 @@ useEffect(() => {
     setIsLoading(false);
   };
   const handleDelete=(id)=>{
-     fetch(`https://jobportal-backend-lnsu.onrender.com/job/${id}`,{method:"DELETE"}).then(res =>res.json).then(data =>{
+     fetch(`https://jobportal-backend-3aoq.onrender.com/job/${id}`,{method:"DELETE"}).then(res =>res.json).then(data =>{
       if(data.acknowledged ===true){
         alert("Job Deleted Successfully ")
       }
