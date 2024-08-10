@@ -12,7 +12,7 @@ function Home() {
   const itemsPerPage=6;
   useEffect(() => {
     setIsLoading(true);
-    fetch("https://jobportal-backend-lnsu.onrender.com/all-jobs/")
+    fetch("https://jobportal-backend-3aoq.onrender.com/all-jobs/")
       .then((res) => res.json())
       .then((data) => {
         setJobs(data);
