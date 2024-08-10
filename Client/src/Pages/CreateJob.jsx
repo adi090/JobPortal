@@ -11,7 +11,7 @@ function CreateJob() {
   } = useForm();
   const onSubmit = (data) => {
     data.skills=selectedOption;
-    fetch("https://jobportal-backend-lnsu.onrender.com/post-job",{
+    fetch("https://jobportal-backend-3aoq.onrender.com/post-job",{
       method:"POST",
       headers:{"content-type":"application/json"},
       body:JSON.stringify(data)
