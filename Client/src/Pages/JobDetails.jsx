@@ -8,7 +8,7 @@ function JobDetails() {
   const [job, setJob] = useState(null);
 
   useEffect(() => {
-    fetch(`https://jobportal-backend-lnsu.onrender.com/all-jobs/${id}`)
+    fetch(`https://jobportal-backend-3aoq.onrender.com/all-jobs/${id}`)
       .then(res => res.json())
       .then(data => setJob(data))
       .catch(error => console.error('Error fetching job details:', error));
