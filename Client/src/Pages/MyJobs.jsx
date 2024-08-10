@@ -19,7 +19,7 @@ const itemsPerPage=4;
 useEffect(() => {
    {
     setIsLoading(true);
-    fetch(`http://localhost:5000/myJobs/${email}`)
+    fetch(`http://localhost:5000/myJobs/asdas@gmail.com`)
       .then((res) => res.json())
       .then((data) => {
         setJobs(data);
@@ -57,10 +57,8 @@ useEffect(() => {
   };
   const handleDelete=(id)=>{
      fetch(`http://localhost:5000/job/${id}`,{method:"DELETE"}).then(res =>res.json).then(data =>{
-      {
-        const updatedJobs = jobs.filter(job => job._id !== id);
-        setJobs(updatedJobs);
-        alert("Job Deleted Successfully");
+      if(data.acknowledged ===true){
+        alert("Job Deleted Successfully ")
       }
      })
   }
